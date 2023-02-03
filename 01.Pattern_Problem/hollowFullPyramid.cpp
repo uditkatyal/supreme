@@ -1,30 +1,32 @@
 #include <iostream>
 using namespace std;
 
-void numericHollowFullPyramid(int n)
+void hollowFullPyramid(int n)
 {
     for (int i = 0; i < n; i++)
     {
-        // to print spaces
         for (int j = 0; j < n - i - 1; j++)
         {
             cout << "  ";
         }
-
+        // for (int j = 0; j < (2 * i + 1); j++)
+        // {
+        //     cout << "* ";
+        // }
         if (i != 0 && i != n - 1)
         {
-            cout << 1;
-            for (int j = 0; j < i * 2; j++)
+            cout << "* ";
+            for (int j = 0; j < (2 * i - 1); j++)
             {
                 cout << "  ";
             }
-            cout << i + 1;
+            cout << "*";
         }
         else
         {
-            for (int j = 0; j <= i; j++)
+            for (int j = 0; j < (2 * i + 1); j++)
             {
-                cout << j + 1 << "   ";
+                cout << "* ";
             }
         }
         cout << endl;
@@ -34,6 +36,5 @@ int main()
 {
     int n;
     cin >> n;
-    numericHollowFullPyramid(n);
-    return 0;
+    hollowFullPyramid(n);
 }

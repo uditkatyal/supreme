@@ -10,7 +10,7 @@ void numericFullPyramid(int n)
         {
             cout << "  ";
         }
-        // to print stars
+        // to print numbers
         for (int j = 0; j < i + 1; j++)
         {
             cout << i + j + 1 << " ";
