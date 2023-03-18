@@ -1,25 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void numericHollowInvertedHalfPyramid(int n)
+void numericHollowHalfPyramid(int n)
 {
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n - i; j++)
+        for (int j = 0; j < i + 1; j++)
         {
-            if (i == 0)
+            if (i == 0 || i == n - 1)
             {
                 cout << j + 1;
             }
             else
             {
-                if (j == n - i - 1)
+                if (j == 0 || j == i)
                 {
-                    cout << n;
-                }
-                else if (j == 0)
-                {
-                    cout << i + 1;
+                    cout << j + 1;
                 }
                 else
                 {
@@ -34,6 +30,7 @@ int main()
 {
     int n;
     cin >> n;
-    numericHollowInvertedHalfPyramid(n);
+
+    numericHollowHalfPyramid(n);
     return 0;
 }

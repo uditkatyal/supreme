@@ -3,59 +3,103 @@ using namespace std;
 
 void hollowDiamond(int n)
 {
+    // even pattern
+    // upper half
+    // for (int i = 0; i < n; i++)
+    // {
+
+    //     for (int j = 0; j < n - i - 1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 0; j < i + 1; j++)
+    //     {
+    //         if (j == 0 || j == i)
+    //         {
+    //             cout << "* ";
+    //         }
+    //         else
+    //         {
+    //             cout << "  ";
+    //         }
+    //     }
+    //     cout << endl;
+    // }
+    // // lower half
+    // for (int i = 0; i < n; i++)
+    // {
+
+    //     for (int j = 0; j < i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 0; j < n - i; j++)
+    //     {
+    //         if (i == 0)
+    //         {
+    //             break;
+    //         }
+    //         if (j == 0 || j == n - i - 1)
+    //         {
+
+    //             cout << "* ";
+    //         }
+    //         else
+    //         {
+    //             cout << "  ";
+    //         }
+    //     }
+    //     if (i != 0)
+    //     {
+    //         cout << endl;
+    //     }
+    //     else
+    //     {
+    //         continue;
+    //     }
+    // }
+
+    // keep odd pattern
     // upper half
     for (int i = 0; i < n; i++)
     {
-
         for (int j = 0; j < n - i - 1; j++)
         {
             cout << " ";
         }
-        for (int j = 0; j < i + 1; j++)
+        for (int j = 0; j < 2 * i + 1; j++)
         {
-            if (j == 0 || j == i)
+            if (j == 0 || j == 2 * i)
             {
-                cout << "* ";
+                cout << "*";
             }
             else
             {
-                cout << "  ";
+                cout << " ";
             }
         }
         cout << endl;
     }
     // lower half
+
     for (int i = 0; i < n; i++)
     {
-
         for (int j = 0; j < i; j++)
         {
             cout << " ";
         }
-        for (int j = 0; j < n - i; j++)
+        for (int j = 0; j < 2 * n - 2 * i - 1; j++)
         {
-            if (i == 0)
+            if (j == 0 || j == 2 * n - 2 * i - 2)
             {
-                break;
-            }
-            if (j == 0 || j == n - i - 1)
-            {
-
-                cout << "* ";
+                cout << "*";
             }
             else
             {
-                cout << "  ";
+                cout << " ";
             }
         }
-        if (i != 0)
-        {
-            cout << endl;
-        }
-        else
-        {
-            continue;
-        }
+        cout << endl;
     }
 }
 

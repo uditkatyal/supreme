@@ -8,15 +8,15 @@ void numericHollowFullPyramid(int n)
         // to print spaces
         for (int j = 0; j < n - i - 1; j++)
         {
-            cout << "  ";
+            cout << " ";
         }
 
         if (i != 0 && i != n - 1)
         {
             cout << 1;
-            for (int j = 0; j < i * 2; j++)
+            for (int j = 0; j < i * 2 - 1; j++)
             {
-                cout << "  ";
+                cout << " ";
             }
             cout << i + 1;
         }
@@ -24,7 +24,7 @@ void numericHollowFullPyramid(int n)
         {
             for (int j = 0; j <= i; j++)
             {
-                cout << j + 1 << "   ";
+                cout << j + 1 << " ";
             }
         }
         cout << endl;
