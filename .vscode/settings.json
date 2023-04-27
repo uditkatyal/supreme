@@ -3,6 +3,7 @@
     "*.ejs": "html",
     "*.jsx": "javascriptreact",
     "ostream": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "new": "cpp"
   }
 }

@@ -22,6 +22,22 @@ public:
         this->data = data;
         this->next = NULL;
     }
+    ~Node()
+    {
+        int val = this->data;
+
+        // although at every deletion i m making node->next = Null and then deleting
+        // this is what we are doing here as well
+        if (this->next != NULL)
+        {
+            delete next;
+            this->next = NULL;
+        }
+        cout << "Memory free for node with data " << val << endl;
+        // if i delete this it will call infinite loop
+        // delete temp will call its destructor and delete this inside destructor will
+        // call destructor again (leading to infinite calls)
+    }
 };
 void print(Node *&head)
 {
