@@ -1,3 +1,4 @@
+// add numbers in linkedList
 #include <iostream>
 using namespace std;
 class Node
@@ -52,6 +53,10 @@ Node *reverseList(Node *&head)
 
 Node *addList(Node *&first, Node *&second)
 {
+    if (first == NULL)
+        return second;
+    if (second == NULL)
+        return first;
 
     int ans = 0;
     int carry;

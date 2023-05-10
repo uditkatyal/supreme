@@ -24,7 +24,7 @@ void lastOccurrenceRTL(string input, int start, char key, int &ans)
 void lastOccurrenceLTR(string input, int start, char key, int &ans)
 {
     // base case
-    if (start < 0)
+    if (start >= input.size())
     {
         return;
     }
@@ -39,21 +39,23 @@ void lastOccurrenceLTR(string input, int start, char key, int &ans)
 
 int main()
 {
-    // char input[] = "ABBABBAB";
-    string input;
-    cin >> input;
+    char input[] = "ABBABBAB";
+    // string input;
+    // cin >> input;
     char key;
     cin >> key;
     int ans = -1;
     lastOccurrenceLTR(input, 0, key, ans);
-    lastOccurrenceRTL(input, input.size() - 1, key, ans);
+    lastOccurrenceRTL(input, strlen(input) - 1, key, ans);
+    cout << ans;
+    cout << endl;
 
     // STL FUNCTION STRRCHAR
     // we also have strchar for first occurence
 
     // strrchr works only array of characters becoz this fucntion is taken into c++ from
     // old c
-    // char input[] = "ABBABAB";
+    // char input[] = "ABBABABBB";
     // char *ptr = strrchr(input, key);
 
     // ptr is the pointer to last occurence of key and input points to the first ele of

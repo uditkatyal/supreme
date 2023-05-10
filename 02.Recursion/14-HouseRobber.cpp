@@ -20,6 +20,7 @@ using namespace std;
 
 //     return max(ans1,ans2);
 
+// with sum
 int maxAdjacentSum(vector<int> &nums, int start, int n, int sum)
 {
     // base case
@@ -33,6 +34,23 @@ int maxAdjacentSum(vector<int> &nums, int start, int n, int sum)
 
     return max(ans1, ans2);
 }
+
+// with sum and maxi
+// void maxAdjacentSum(vector<int> &nums, int start, int n, int sum, int &maxi)
+// {
+//     // base case
+//     if (start >= n)
+//     {
+//         maxi = max(maxi, sum);
+//         return;
+//     }
+//     // ek case hum solve kr rhe baaki recursion smbhal lega
+//     // include
+//     maxAdjacentSum(nums, start + 2, n, sum + nums[start], maxi);
+
+//     // exclude
+//     maxAdjacentSum(nums, start + 1, n, sum, maxi);
+// }
 
 int main()
 {

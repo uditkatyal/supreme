@@ -1,4 +1,4 @@
-// recursive pattern -> INCLUDE - EXCLUD
+// recursive pattern -> INCLUDE - EXCLUDE
 // Time Complexity -> O(2^N) EXPONENTIAL
 // always recursive tree to have understanding of time complexity
 

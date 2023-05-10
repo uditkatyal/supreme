@@ -14,7 +14,25 @@ int n1 = 0, n2 = 1;
 //     return fibonacci(n - 1) + fibonacci(n - 2);
 // }
 
+// no use of array for storing data, playing with variables
+
+// int fib(int n)
+// {
+//     int a = 0, b = 1, c, i;
+//     if (n == 0)
+//         return a;
+//
+//     for (i = 2; i <= n; i++)
+//     {
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+
 // printing fibonacci series
+
 void fibonacci(int n)
 {
     // base case
